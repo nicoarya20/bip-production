@@ -7,7 +7,6 @@ PasswordInput,
 Text,
 Paper,
 Group,
-PaperProps,
 Button,
 Divider,
 Checkbox,
@@ -18,7 +17,7 @@ import { GoogleButton } from "./components/GoogleButton";
 import { TwitterButton } from "./components/TwitterButton";
 
 
-export default function AuthenticationForm(props: PaperProps) {
+export default function AuthenticationForm() {
   const [type, toggle] = useToggle(['login', 'register']);
   const form = useForm({
     initialValues: {
@@ -34,7 +33,7 @@ export default function AuthenticationForm(props: PaperProps) {
     },
   });
 return(
-<Paper radius={"md"} p={"xl"} withBorder {...props}>
+<Paper radius={"md"} p={"xl"} withBorder >
   <Text size="lg" fw={500}>
     Welcome to Login, {type} with
   </Text>
